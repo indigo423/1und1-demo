@@ -1,0 +1,28 @@
+<userinfo xmlns="http://xmlns.opennms.org/xsd/users">
+   <header>
+      <rev>.9</rev>
+      <created>Monday, August 7, 2017 2:19:26 PM GMT</created>
+      <mstation>master.nmanage.com</mstation>
+   </header>
+   <users>
+      <user>
+         <user-id>admin</user-id>
+         <full-name>Administrator</full-name>
+         <user-comments>Default administrator, do not delete</user-comments>
+         <password>21232F297A57A5A743894A0E4A801FC3</password>
+         <role>ROLE_ADMIN</role>
+      </user>
+      <user>
+         <user-id>minion</user-id>
+         <password salt="true">hgf3EOPQKX4HknZVTIDuP0UfN1PGgmd3STbDIJo7g+MHRnEXrXDBqafptDfetT/j</password>
+         <role>ROLE_MINION</role>
+      </user>
+      <user>
+         <user-id>rtc</user-id>
+         <full-name>RTC</full-name>
+         <user-comments>RTC user, do not delete</user-comments>
+         <password>68154466F81BFB532CD70F8C71426356</password>
+         <role>ROLE_RTC</role>
+      </user>
+   </users>
+</userinfo>

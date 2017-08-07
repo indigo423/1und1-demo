@@ -1,0 +1,77 @@
+<model-import xmlns="http://xmlns.opennms.org/xsd/config/model-import" date-stamp="2017-08-07T16:56:22.833+02:00" foreign-source="demo-environment" last-import="2017-08-07T16:56:33.946+02:00">
+   <node location="Default" foreign-id="database" node-label="database">
+      <interface ip-addr="172.30.0.10" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+      <asset name="longitude" value="9.1685303"/>
+      <asset name="latitude" value="48.8258763"/>
+   </node>
+   <node location="Default" foreign-id="opennms" node-label="opennms">
+      <interface ip-addr="172.30.0.11" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+      <asset name="longitude" value="9.1685303"/>
+      <asset name="latitude" value="48.8258763"/>
+   </node>
+   <node location="Default" foreign-id="grafana" node-label="grafana">
+      <interface ip-addr="172.30.0.12" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+      <asset name="longitude" value="9.1685303"/>
+      <asset name="latitude" value="48.8258763"/>
+   </node>
+   <node location="Default" foreign-id="dc.srv.01" node-label="dc.srv.01">
+      <interface ip-addr="172.30.0.32" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="SNMP"/>
+      </interface>
+      <asset name="longitude" value="9.1685303"/>
+      <asset name="latitude" value="48.8258763"/>
+   </node>
+   <node location="Default" foreign-id="dc.srv.02" node-label="dc.srv.02">
+      <interface ip-addr="172.30.0.33" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="SNMP"/>
+      </interface>
+      <asset name="longitude" value="9.1685303"/>
+      <asset name="latitude" value="48.8258763"/>
+   </node>
+   <node location="Default" foreign-id="dc.web.01" node-label="dc.web.01">
+      <interface ip-addr="172.30.0.34" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+      <asset name="longitude" value="9.1685303"/>
+      <asset name="latitude" value="48.8258763"/>
+   </node>
+   <node location="Branch" foreign-id="minion" node-label="minion">
+      <interface ip-addr="192.168.1.10" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+      <asset name="longitude" value="9.6850807"/>
+      <asset name="latitude" value="50.5648609"/>
+   </node>
+   <node location="Branch" foreign-id="branch.srv.01" node-label="branch.srv.01">
+      <interface ip-addr="192.168.1.100" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="SNMP"/>
+      </interface>
+      <asset name="longitude" value="9.6850807"/>
+      <asset name="latitude" value="50.5648609"/>
+   </node>
+   <node location="Branch" foreign-id="branch.srv.02" node-label="branch.srv.02">
+      <interface ip-addr="192.168.1.101" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="SNMP"/>
+      </interface>
+      <asset name="longitude" value="9.6850807"/>
+      <asset name="latitude" value="50.5648609"/>
+   </node>
+   <node location="Branch" foreign-id="branch.web.01" node-label="branch.web.01">
+      <interface ip-addr="192.168.1.102" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="HTTP"/>
+      </interface>
+      <asset name="longitude" value="9.6850807"/>
+      <asset name="latitude" value="50.5648609"/>
+   </node>
+</model-import>
