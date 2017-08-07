@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+    <key id="breadcrumb-strategy" for="graphml" attr.name="breadcrumb-strategy" attr.type="string"/>
+    <key id="label" for="all" attr.name="label" attr.type="string"></key>
+    <key id="description" for="graph" attr.name="description" attr.type="string"></key>
+    <key id="namespace" for="graph" attr.name="namespace" attr.type="string"></key>
+    <key id="focus-strategy" for="graph" attr.name="focus-strategy" attr.type="string"></key>
+    <key id="focus-ids" for="graph" attr.name="focus-ids" attr.type="string"></key>
+    <key id="foreignSource" for="node" attr.name="foreignSource" attr.type="string"></key>
+    <key id="foreignID" for="node" attr.name="foreignID" attr.type="string"></key>
+    <key id="preferred-layout" for="graph" attr.name="preferred-layout" attr.type="string"></key>
+    <key id="vertex-status-provider" for="graph" attr.name="vertex-status-provider" attr.type="boolean"></key>
+    <key id="iconKey" for="node" attr.name="iconKey" attr.type="string"></key>
+    <key id="semantic-zoom-level" for="graph" attr.name="semantic-zoom-level" attr.type="int"/>
+    <data key="label">OpenNMS Demo</data>
+    <data key="breadcrumb-strategy">NONE</data>
+
+    <graph id="topology" edgedefault="undirected">
+        <data key="namespace">opennms-demo</data>
+        <data key="focus-strategy">ALL</data>
+        <data key="vertex-status-provider">true</data>
+
+        <!-- Stuttgart -->
+        <node id="database">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">database</data>
+            <data key="foreignID">database</data>
+            <data key="iconKey">database</data>
+        </node>
+        <node id="opennms">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">opennms</data>
+            <data key="foreignID">opennms</data>
+            <data key="iconKey">opennms_server</data>
+        </node>
+        <node id="grafana">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">grafana</data>
+            <data key="foreignID">grafana</data>
+        </node>
+        <node id="dc.srv.01">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">dc.srv.01</data>
+            <data key="foreignID">dc.srv.01</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="dc.srv.02">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">dc.srv.02</data>
+            <data key="foreignID">dc.srv.02</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="dc.web.01">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">dc.web.01</data>
+            <data key="foreignID">dc.web.01</data>
+            <data key="iconKey">server</data>
+        </node>
+        <edge id="opennms-net.dc" source="opennms" target="net.dc"/>
+        <edge id="grafana-net.dc" source="grafana" target="net.dc"/>
+        <edge id="database-net.dc" source="database" target="net.dc"/>
+        <edge id="dc.srv.01-net.dc" source="dc.srv.01" target="net.dc"/>
+        <edge id="dc.srv.02-net.dc" source="dc.srv.02" target="net.dc"/>
+        <edge id="dc.web.01-net.dc" source="dc.web.01" target="net.dc"/>
+
+        <!-- Networks -->
+        <node id="net.dc">
+            <data key="label">172.30.0.0/24</data>
+            <data key="iconKey">vmware-network</data>
+        </node>
+        <node id="net.branch">
+            <data key="label">172.31.0.0/24</data>
+            <data key="iconKey">vmware-network</data>
+        </node>
+
+        <!-- Branch -->
+        <node id="minion">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">minion</data>
+            <data key="foreignID">minion</data>
+        </node>
+        <node id="branch.srv.01">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">branch.srv.01</data>
+            <data key="foreignID">branch.srv.01</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="branch.srv.02">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">branch.srv.02</data>
+            <data key="foreignID">branch.srv.02</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="branch.web.01">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">branch.web.01</data>
+            <data key="foreignID">branch.web.01</data>
+            <data key="iconKey">server</data>
+        </node>
+        <edge id="minion-net.branch" source="minion" target="net.branch"/>
+        <edge id="minion-net.dc" source="minion" target="net.dc"/>
+        <edge id="branch.srv.01-branch-net.branch" source="branch.srv.01" target="net.branch"/>
+        <edge id="branch.srv.02-branch-net.branch" source="branch.srv.02" target="net.branch"/>
+        <edge id="branch.web.01-net.branch" source="branch.web.01" target="net.branch"/>
+    </graph>
+</graphml>
