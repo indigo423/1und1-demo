@@ -1,0 +1,5 @@
+<foreign-source xmlns="http://xmlns.opennms.org/xsd/config/foreign-source" name="Websites" date-stamp="2017-08-09T16:50:02.607+02:00">
+   <scan-interval>1d</scan-interval>
+   <detectors/>
+   <policies/>
+</foreign-source>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+  <global>
+    <security>
+      <doNotOverride>logmsg</doNotOverride>
+      <doNotOverride>operaction</doNotOverride>
+      <doNotOverride>autoaction</doNotOverride>
+      <doNotOverride>tticket</doNotOverride>
+      <doNotOverride>script</doNotOverride>
+    </security>
+  </global>
+
+  <event-file>events/opennms.snmp.trap.translator.events.xml</event-file>
+
+  <event-file>events/opennms.ackd.events.xml</event-file>
+  <event-file>events/opennms.alarm.events.xml</event-file>
+  <event-file>events/opennms.alarmChangeNotifier.events.xml</event-file>
+  <event-file>events/opennms.bsm.events.xml</event-file>
+  <event-file>events/opennms.config.events.xml</event-file>
+  <event-file>events/opennms.correlation.events.xml</event-file>
+  <event-file>events/opennms.default.threshold.events.xml</event-file>
+  <event-file>events/opennms.discovery.events.xml</event-file>
+  <event-file>events/opennms.internal.events.xml</event-file>
+  <event-file>events/opennms.linkd.events.xml</event-file>
+  <event-file>events/opennms.mib.events.xml</event-file>
+  <event-file>events/opennms.pollerd.events.xml</event-file>
+  <event-file>events/opennms.provisioning.events.xml</event-file>
+  <event-file>events/opennms.minion.events.xml</event-file>
+  <event-file>events/opennms.remote.poller.events.xml</event-file>
+  <event-file>events/opennms.reportd.events.xml</event-file>
+  <event-file>events/opennms.syslogd.events.xml</event-file>
+  <event-file>events/opennms.ticketd.events.xml</event-file>
+  <event-file>events/opennms.tl1d.events.xml</event-file>
+  <event-file>events/category-based-thresholds.events.xml</event-file>
+
+  <event-file>events/AlarmChangeNotifierEvents.xml</event-file>
+  <event-file>events/GraphMLAssetPluginEvents.xml</event-file>
+
+  <event-file>events/Cisco2.events.xml</event-file>
+  <event-file>events/Cisco.events.xml</event-file>
+  <event-file>events/DISMAN.events.xml</event-file>
+  <event-file>events/DISMAN-PING.events.xml</event-file>
+  <event-file>events/NetSNMP.events.xml</event-file>
+  <event-file>events/OpenSSH.syslog.events.xml</event-file>
+  <event-file>events/Procmail.syslog.events.xml</event-file>
+  <event-file>events/POSIX.syslog.events.xml</event-file>
+  <event-file>events/Postfix.syslog.events.xml</event-file>
+  <event-file>events/Sudo.syslog.events.xml</event-file>
+  <event-file>events/Syslogd.events.xml</event-file>
+
+  <event-file>events/opennms.catch-all.events.xml</event-file>
+</events>

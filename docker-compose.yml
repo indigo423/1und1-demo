@@ -67,6 +67,9 @@ services:
   pris:
     image: opennms/pris:1.1.6
     container_name: opennms-pris
+    networks:
+      net.dc:
+        ipv4_address: 172.30.0.8
     environment:
       - TZ=Europe/Berlin
     volumes:
