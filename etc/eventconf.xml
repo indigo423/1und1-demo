@@ -31,8 +31,8 @@
   <event-file>events/opennms.syslogd.events.xml</event-file>
   <event-file>events/opennms.ticketd.events.xml</event-file>
   <event-file>events/opennms.tl1d.events.xml</event-file>
+  <event-file>events/category-based-thresholds.events.xml</event-file>
 
-  <event-file>events/Rancid.events.xml</event-file>
   <event-file>events/AlarmChangeNotifierEvents.xml</event-file>
   <event-file>events/GraphMLAssetPluginEvents.xml</event-file>
 
