@@ -98,27 +98,17 @@
             <parameter key="thresholding-enabled" value="true"/>
         </service>
     </package>
-    <package name="example1">
+    <package name="datacollection-30sec">
         <filter>IPADDR != '0.0.0.0'</filter>
         <include-range begin="1.1.1.1" end="254.254.254.254"/>
         <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
 
-        <service name="SNMP" interval="300000" user-defined="false" status="on">
+        <service name="SNMP" interval="30000" user-defined="false" status="on">
             <parameter key="collection" value="default"/>
             <parameter key="thresholding-enabled" value="true"/>
         </service>
 
-        <service name="WMI" interval="300000" user-defined="false" status="off">
-            <parameter key="collection" value="default"/>
-            <parameter key="thresholding-enabled" value="true"/>
-        </service>
-
-        <service name="WS-Man" interval="300000" user-defined="false" status="on">
-            <parameter key="collection" value="default"/>
-            <parameter key="thresholding-enabled" value="true"/>
-        </service>
-
-        <service name="OpenNMS-JVM" interval="300000" user-defined="false" status="on">
+        <service name="OpenNMS-JVM" interval="30000" user-defined="false" status="on">
             <parameter key="port" value="18980"/>
             <parameter key="retry" value="2"/>
             <parameter key="timeout" value="3000"/>
@@ -129,7 +119,7 @@
             <parameter key="friendly-name" value="opennms-jvm"/>
         </service>
 
-        <service name="JMX-Minion" interval="300000" user-defined="false" status="on">
+        <service name="JMX-Minion" interval="30000" user-defined="false" status="on">
             <parameter key="port" value="1299"/>
             <parameter key="retry" value="2"/>
             <parameter key="timeout" value="3000"/>
@@ -144,7 +134,7 @@
             <parameter key="friendly-name" value="jmx-minion"/>
         </service>
 
-        <service name="JMX-Kafka" interval="300000" user-defined="false" status="on">
+        <service name="JMX-Kafka" interval="30000" user-defined="false" status="on">
             <parameter key="port" value="9999"/>
             <parameter key="retry" value="2"/>
             <parameter key="timeout" value="3000"/>
@@ -155,7 +145,7 @@
             <parameter key="friendly-name" value="jmx-kafka"/>
         </service>
 
-        <service name="PostgreSQL" interval="300000" user-defined="false" status="on">
+        <service name="PostgreSQL" interval="30000" user-defined="false" status="on">
             <parameter key="collection" value="PostgreSQL"/>
             <parameter key="thresholding-enabled" value="true"/>
             <parameter key="driver" value="org.postgresql.Driver"/>
@@ -164,7 +154,7 @@
             <parameter key="url" value="jdbc:postgresql://OPENNMS_JDBC_HOSTNAME:5432/opennms"/>
         </service>
 
-        <service name="Elasticsearch" interval="300000" user-defined="false" status="on">
+        <service name="Elasticsearch" interval="30000" user-defined="false" status="on">
             <parameter key="collection" value="xml-elasticsearch-cluster-stats" />
             <parameter key="handler-class" value="org.opennms.protocols.json.collector.DefaultJsonCollectionHandler"/>
         </service>
