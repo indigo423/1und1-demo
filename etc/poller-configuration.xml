@@ -66,21 +66,21 @@
     <filter>IPADDR != '0.0.0.0'</filter>
     <include-range begin="1.1.1.1" end="254.254.254.254" />
     <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff" />
-    <rrd step="30">
-      <rra>RRA:AVERAGE:0.5:1:20160</rra>
-      <rra>RRA:AVERAGE:0.5:12:14880</rra>
-      <rra>RRA:AVERAGE:0.5:288:3660</rra>
-      <rra>RRA:MAX:0.5:288:3660</rra>
-      <rra>RRA:MIN:0.5:288:3660</rra>
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
     </rrd>
-    <service name="ICMP" interval="30000" user-defined="false" status="on">
+    <service name="ICMP" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="2" />
       <parameter key="timeout" value="3000" />
       <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
       <parameter key="rrd-base-name" value="icmp" />
       <parameter key="ds-name" value="icmp" />
     </service>
-    <service name="DNS" interval="30000" user-defined="false" status="on">
+    <service name="DNS" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="2" />
       <parameter key="timeout" value="5000" />
       <parameter key="port" value="53" />
@@ -90,7 +90,7 @@
       <parameter key="rrd-base-name" value="dns" />
       <parameter key="ds-name" value="dns" />
     </service>
-    <service name="Elasticsearch" interval="30000" user-defined="false" status="on">
+    <service name="Elasticsearch" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1"/>
       <parameter key="timeout" value="3000"/>
       <parameter key="port" value="9200"/>
@@ -98,7 +98,7 @@
       <parameter key="response" value="200-202,299"/>
       <parameter key="response-text" value="~.*status.:.green.*"/>
     </service>
-    <service name="SMTP" interval="30000" user-defined="false" status="on">
+    <service name="SMTP" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="25" />
@@ -106,17 +106,17 @@
       <parameter key="rrd-base-name" value="smtp" />
       <parameter key="ds-name" value="smtp" />
     </service>
-    <service name="FTP" interval="30000" user-defined="false" status="on">
+    <service name="FTP" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="21" />
       <parameter key="userid" value="" />
       <parameter key="password" value="" />
     </service>
-    <service name="SNMP" interval="30000" user-defined="false" status="on">
+    <service name="SNMP" interval="300000" user-defined="false" status="on">
       <parameter key="oid" value=".1.3.6.1.2.1.1.2.0" />
     </service>
-    <service name="HTTP" interval="30000" user-defined="false" status="on">
+    <service name="HTTP" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="80" />
@@ -125,7 +125,7 @@
       <parameter key="rrd-base-name" value="http" />
       <parameter key="ds-name" value="http" />
     </service>
-    <service name="HTTP-8080" interval="30000" user-defined="false" status="on">
+    <service name="HTTP-8080" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="8080" />
@@ -134,7 +134,7 @@
       <parameter key="rrd-base-name" value="http-8080" />
       <parameter key="ds-name" value="http-8080" />
     </service>
-    <service name="HTTP-8000" interval="30000" user-defined="false" status="on">
+    <service name="HTTP-8000" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="8000" />
@@ -143,18 +143,18 @@
       <parameter key="rrd-base-name" value="http-8000" />
       <parameter key="ds-name" value="http-8000" />
     </service>
-    <service name="HTTPS" interval="30000" user-defined="false" status="on">
+    <service name="HTTPS" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="5000" />
       <parameter key="port" value="443" />
       <parameter key="url" value="/" />
     </service>
-    <service name="HypericAgent" interval="30000" user-defined="false" status="on">
+    <service name="HypericAgent" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="2200" />
       <parameter key="port" value="2144" />
     </service>
-    <service name="HypericHQ" interval="30000" user-defined="false" status="on">
+    <service name="HypericHQ" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
@@ -173,31 +173,31 @@
         </page-sequence>
       </parameter>
     </service>
-    <service name="MySQL" interval="30000" user-defined="false" status="on">
+    <service name="MySQL" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="3306" />
       <parameter key="banner" value="*" />
     </service>
-    <service name="SQLServer" interval="30000" user-defined="false" status="on">
+    <service name="SQLServer" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="1433" />
       <parameter key="banner" value="*" />
     </service>
-    <service name="Oracle" interval="30000" user-defined="false" status="on">
+    <service name="Oracle" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="1521" />
       <parameter key="banner" value="*" />
     </service>
-    <service name="Postgres" interval="30000" user-defined="false" status="on">
+    <service name="Postgres" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="banner" value="*" />
       <parameter key="port" value="5432" />
       <parameter key="timeout" value="3000" />
     </service>
-    <service name="SSH" interval="30000" user-defined="false" status="on">
+    <service name="SSH" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="banner" value="SSH" />
       <parameter key="port" value="22" />
@@ -206,12 +206,12 @@
       <parameter key="rrd-base-name" value="ssh" />
       <parameter key="ds-name" value="ssh" />
     </service>
-    <service name="IMAP" interval="30000" user-defined="false" status="on">
+    <service name="IMAP" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="port" value="143" />
       <parameter key="timeout" value="3000" />
     </service>
-    <service name="POP3" interval="30000" user-defined="false" status="on">
+    <service name="POP3" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="port" value="110" />
       <parameter key="timeout" value="3000" />
@@ -219,7 +219,7 @@
       <parameter key="rrd-base-name" value="pop3" />
       <parameter key="ds-name" value="pop3" />
     </service>
-    <service name="NRPE" interval="30000" user-defined="false" status="on">
+    <service name="NRPE" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="3" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="5666" />
@@ -228,7 +228,7 @@
       <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
       <parameter key="ds-name" value="nrpe" />
     </service>
-    <service name="NRPE-NoSSL" interval="30000" user-defined="false" status="on">
+    <service name="NRPE-NoSSL" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="3" />
       <parameter key="timeout" value="3000" />
       <parameter key="port" value="5666" />
@@ -238,7 +238,7 @@
       <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
       <parameter key="ds-name" value="nrpe" />
     </service>
-    <service name="Windows-Task-Scheduler" interval="30000" user-defined="false" status="on">
+    <service name="Windows-Task-Scheduler" interval="300000" user-defined="false" status="on">
       <parameter key="service-name" value="Task Scheduler" />
     </service>
     <service name="OpenNMS-JVM" interval="300000" user-defined="false" status="on">
@@ -257,7 +257,7 @@
       <parameter key="password" value="admin"/>
       <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
     </service>
-    <service name="JMX-Kafka" interval="30000" user-defined="false" status="on">
+    <service name="JMX-Kafka" interval="300000" user-defined="false" status="on">
       <parameter key="port" value="9999"/>
       <parameter key="retry" value="2"/>
       <parameter key="timeout" value="3000"/>
@@ -266,17 +266,17 @@
       <parameter key="password" value="admin"/>
       <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
     </service>
-    <service name="VMwareCim-HostSystem" interval="30000" user-defined="false" status="on">
+    <service name="VMwareCim-HostSystem" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="2"/>
       <parameter key="timeout" value="3000"/>
       <parameter key="ignoreStandBy" value="false"/>
     </service>
-    <service name="VMware-ManagedEntity" interval="30000" user-defined="false" status="on">
+    <service name="VMware-ManagedEntity" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="2"/>
       <parameter key="timeout" value="3000"/>
       <parameter key="ignoreStandBy" value="false"/>
     </service>
-    <service name="MS-RDP" interval="30000" user-defined="false" status="on">
+    <service name="MS-RDP" interval="300000" user-defined="false" status="on">
       <parameter key="retry" value="1" />
       <parameter key="banner" value="*" />
       <parameter key="port" value="3389" />
@@ -287,7 +287,7 @@
     </service>
  
     <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
-    <downtime interval="30000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
     <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
     <downtime interval="3600000" begin="432000000" /><!-- 1h, 5d -->
 

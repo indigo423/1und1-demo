@@ -18,10 +18,9 @@
 ################################################################################
 
 #
-# This configuration file defines the ACLs for commands in the kar subshell
-# 
-# For an explanation of the syntax of this file, see the file:
-#   org.apache.karaf.command.acl.osgi.cfg
+# This file contains the general platform information required by the itests to find out
+# about the current versions.
 #
-install = admin
-uninstall = admin
+karafVersion=4.0.8
+name=Apache Karaf
+

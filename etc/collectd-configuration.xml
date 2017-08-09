@@ -103,7 +103,7 @@
         <include-range begin="1.1.1.1" end="254.254.254.254"/>
         <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
 
-        <service name="SNMP" interval="30000" user-defined="false" status="on">
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
             <parameter key="collection" value="default"/>
             <parameter key="thresholding-enabled" value="true"/>
         </service>
